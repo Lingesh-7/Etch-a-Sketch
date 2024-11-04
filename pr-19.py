@@ -1,232 +1,43 @@
 
-
-
 #ETCH A SECTCH PROJECT 1
 
-# import turtle as t
-
-
-
-# aamai=t.Turtle()
-
-
-# def a():
- 
-
-
-#     aamai.left(10)
-
-
-
-# def w():
-
-
-
-#     aamai.forward(10)
-
-
-
-# def s():
-
-
-
-#     aamai.backward(10)
-
-
-
-# def d():
-
-
-
-#     aamai.right(10)
-
-
-
-# def up():
-
-
-#     aamai.circle(10)
-    
-
-
-
-# def clr():
-#     aamai.penup()
-#     aamai.clear()
-
-
-#     aamai.home()
-
-#     aamai.pendown()
-
-
-
-
-# myscr=t.Screen()
-# myscr.listen()
-
-
-# myscr.onkey(a,'a')
-
-
-# myscr.onkey(w,'w')
-
-
-# myscr.onkey(s,'s')
-
-
-# myscr.onkey(d,'d')
-
-
-# myscr.onkey(up,'c')
-
-
-# myscr.onkey(clr,'k')
-
-
-# myscr.exitonclick()
-
-
-
-
 import turtle as t
-import random as r  
+print("Welcome to Etch A Seckch!!!\nPress the Following for:\n'a' to turn left\n'w' to move forward\n's' to move backward\n'd' for turning right\n's' for moving back\n'c' for drawing circle\n'k' for clear screen")
+aamai=t.Turtle()
+aamai.shape('turtle')
 
 
+def clr():
+    aamai.penup()
+    aamai.clear()
+    aamai.home()
+    aamai.pendown()
+
+def a():
+    aamai.left(20)
+
+def w():
+    aamai.forward(10)
+
+def s():
+    aamai.backward(20)
+
+def c():
+    aamai.circle(20)
+def d():
+    aamai.right(20)
 
 myscr=t.Screen()
-
-
-myscr.setup(width=500,height=400)
-
-israce=True
-re= myscr.textinput(title='Make your Bet!!!',prompt='Which Turtle Will Win the RACE? Enter color:').lower()
-print(re)
-
-
-
-alla=[]
-
-
-
-
-
-
-
-
-aamaico=['red','green','purple','blue','yellow','orange']
-
-
-yp=[-70,-40,-10,20,50,80]
-
-
-for i in range(0,6):
-    aamais=t.Turtle(shape='turtle')
-    aamais.color(aamaico[i])
-    aamais.penup()
-    aamais.goto(x=-240,y=yp[i])
-    alla.append(aamais)
-
-
-
-
-
-
-while israce:
-    for i in alla:
-        # rdis=
-        if i.xcor()>230:
-            israce=False
-            # print(i.color())
-            if re==i.pencolor():
-                print(f"You Won!!! The {str(i.pencolor()).upper()} is the Winneerr!!")
-            else:
-                print(f"You Loss!!! The {str(i.pencolor()).upper()} is the Winneerr!!")
-               
-        i.forward(r.randint(0,11))
-        
-
-# red=t.Turtle()
-
-
-# sha(red)
-# red.color('red')
-# co(red)
-
-
-# red.goto(-240,-140)
-
-
-
-
-# purple=t.Turtle()
-# purple.color('purple')
-
-
-# sha(purple)
-# co(purple)
-
-
-# purple.goto(-240,-80)
-
-
-
-
-# orange=t.Turtle()
-# orange.color('orange')
-
-
-# sha(orange)
-# co(orange)
-
-
-# orange.goto(-240,-20)
-
-
-
-# green=t.Turtle()
-# green.color('green')
-
-
-# sha(green)
-# co(green)
-
-
-# green.goto(-240,30)
-
-
-
-# blue=t.Turtle()
-
-
-# blue.color('blue')
-
-
-# sha(blue)
-
-
-# co(blue)
-
-
-# blue.goto(-240,80)
-
-
-
-
-
-# yellow=t.Turtle()
-
-# yellow.color('yellow')
-
-
-# sha(yellow)
-
-# co(yellow)
-
-
-# yellow.goto(-240,140)  
-
-
-
-
+myscr.listen()
+myscr.onkey(a,'a')
+myscr.onkey(w,'w')
+myscr.onkey(s,'s')
+myscr.onkey(d,'d')
+myscr.onkey(c,'c')
+myscr.onkey(clr,'k')
 myscr.exitonclick()
+
+
+
+
+
